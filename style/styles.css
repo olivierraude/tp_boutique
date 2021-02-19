@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
+
 * {     
     font-family: 'Poppins', sans-serif;
 }
@@ -64,8 +66,8 @@ body {
 .more {
     background-image: url('/JS/tp2/assets/images/logo/plus.svg');
     align-items: center;
-    background-color: #c9bc1f;
-    border: 10px solid #c9bc1f;
+    background-color: #8a4fff;
+    border: 10px solid #8a4fff;
     border-radius: 100px;
     display: flex;
     justify-content: center;
@@ -79,7 +81,8 @@ body {
 }
 
 h1 {     
-    font-family: 'Sigmar One', cursive;
+    font-family: 'Italiana', serif;
+    color: white;
     font-size: 4em;
     margin-left: 0.5em;
 }
@@ -91,7 +94,7 @@ h1 {
 }
 
 header {     
-    background-color: #c9bc1f;
+    background-color: #8a4fff;
     display: flex;
     justify-content: space-between;
     height: 6em;

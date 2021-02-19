@@ -13,7 +13,11 @@
 		
 		public function __construct()
 		{
-			$this->connexion = new PDO("mysql:host=localhost;dbname=boutique", "root", "root");
+			$this->connexion = new PDO(
+				"mysql:host=localhost;dbname=boutique", 
+				"root", 
+				"root"
+			);
 		}
 	}
 ?>

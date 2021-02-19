@@ -1,6 +1,6 @@
 <header>
 	<div class="titre">
-		<h1> PORSLIN </h1>
+		<h1> Popotte </h1>
 	</div>
 	<div class="command" data-component="Form">
 		<div>

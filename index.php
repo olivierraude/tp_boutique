@@ -12,9 +12,9 @@
     function mon_autoloader($classe)
     {
         //liste des répertoires à fouiller pour trouver les classes
-        $repertoires = array(RACINE . "controleurs/", 
-						RACINE . "modeles/", 
-						RACINE . "vues/");
+        $repertoires = array(RACINE . "Controllers/", 
+						RACINE . "Models/", 
+						RACINE . "Views/");
         
         foreach($repertoires as $rep)
         {
