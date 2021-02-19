@@ -1,0 +1,102 @@
+
+.card {
+  position: relative;
+  width: 280px;
+  height: 368px;
+  background: white;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: -5px 5px 5px #e5ecf4;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: -50%;
+    width: 100%;
+    height: 100%;
+    background: #e5ecf4;
+    transform: skewY(345deg);
+    transition: 0.5s;
+  }
+
+  &:hover::before {
+    top: -70%;
+    transform: skewY(390deg);
+  }
+
+  &::after {
+    //content: 'Pichet minimal';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    font-size: 8em;
+    color: #8a4fff;
+  }
+
+  &_img {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 10px;
+    z-index: 1;
+    mix-blend-mode: multiply;
+
+    & img {
+      max-width: 100%;
+      transition: 0.5s;
+    }
+  }
+
+  &:hover .card_img img {
+    max-width: 80%;
+  }
+
+  &_content {
+    position: relative;
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    & h3 {
+      font-size: 15px;
+      color: #8a4fff;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+  }
+
+  &_price {
+    font-size: 24px;
+    color: #8a4fff;
+    letter-spacing: 1px;
+  }
+
+  &_buy {
+    position: relative;
+    top: 200px;
+    opacity: 0;
+    padding: 10px 30px;
+    margin-top: 15px;
+    color: #e5ecf4;
+    text-decoration: none;
+    background: #8a4fff;
+    border-radius: 1px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: 0.5s;
+
+    &:hover {
+      color: #8a4fff;
+      background: #e5ecf4;
+    }
+  }
+
+  &:hover .card_content .card_buy {
+    top: 0;
+    opacity: 1;
+  }
+}

@@ -5,12 +5,12 @@
 		//la fonction qui sera appelée par le routeur
 		public function traite(array $params)
 		{
-			$this->afficheVue("Head");
+			$this->afficheVue("Common/Head");
 
 			//modèle et vue vides par défaut
 			$data = array();
 
-			$vue = "Header";	
+			$vue = "Common/Header";	
 			$this->afficheVue($vue);
 			$vue = "RechercheParOrdre";	
 			$this->afficheVue($vue);
@@ -58,7 +58,7 @@
 			$vue = "ListeProduits";		
 			$this->afficheVue($vue, $data);
 			*/
-			$this->afficheVue("Footer");
+			$this->afficheVue("Common/Footer");
 		}
 	}
 ?>

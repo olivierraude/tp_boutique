@@ -1,0 +1,20 @@
+
+.more {
+    align-items: center;
+    background-color: #8a4fff;
+    border-radius: 100px;
+    border: 2px solid #8a4fff;
+    display: flex;
+    justify-content: center;
+    padding: 1em;
+    
+    &:hover {
+        background-color: #90F3FF;
+        border: 2px solid #90F3FF;
+
+    }
+
+    svg {
+        fill: white;
+    }
+}
