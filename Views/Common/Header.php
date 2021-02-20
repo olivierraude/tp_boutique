@@ -1,18 +1,18 @@
 <header>
 	<nav>
 		<h1> <a href="index.php?">Popotte </a></h1>
-		<div class="command" data-component="Form">	
-			<div>
-				<div class="items" data-js-items></div>
-				<p class="nbItems" data-js-nbItems></p>
-				<svg 
+		<div class="cart" data-component="Form">	
+			<div class="svg_bag">
+
+				<span data-js-items data-js-nbItems></span>
+				<svg
 					version="1.1" 
 					id="Capa_1" 
 					xmlns="http://www.w3.org/2000/svg" 
 					xmlns:xlink="http://www.w3.org/1999/xlink" 
-
+	
 					width="64px" height="64px"
-
+	
 					viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
 					<path style="fill:#B4DEB2;" d="M436.784,485.289C421.059,502.263,398.766,512,375.624,512H136.383
 					c-23.142,0-45.435-9.737-61.16-26.711c-15.725-16.984-23.732-39.957-21.963-63.029l22.872-288.194
@@ -36,7 +36,7 @@
 				</svg>
 			</div>
 			
-			<button href="./index.php?Boutique&action=afficheTableau" class="btn--command btn--hidden" data-js-command> Commander </button>
+			<button class="cart_buy" href="./index.php?Boutique&action=afficheTableau" class="btn--command btn--hidden" data-js-command> Commander </button>
 			
 		</div>
 	</nav>

@@ -1,5 +1,5 @@
 <?php
-	class Controleur_Boutique_AJAX extends Controleur_Boutique
+	class Controleur_boutique_AJAX extends BaseControleur
 	{	
 		//la fonction qui sera appelée par le routeur
 		public function traite(array $params)
@@ -9,15 +9,13 @@
 			{
 				
 				//modèle et vue vides par défaut
-				$data = array();
-                $vue = "";					
+				$data = array();					
                 
 				//switch en fonction de l'action qui nous est envoyée
 				//ce switch détermine la vue $vue et obtient le modèle $data
 				switch($params["action"])
 				{
 					case "affichePremiereListe":
-						//var_dump('Ça load!aussi');
 						$modeleBoutique = new Modele_Boutique();
 						$data = $modeleBoutique->obtenirProduits('id',12);
 						$vue = "ListeProduits";		
@@ -30,8 +28,6 @@
                         {
 							$modeleBoutique = new Modele_Boutique();
 							$data = $modeleBoutique->obtenirProduits($params["tri"],$params["offset"]);
-							//var_dump($params["tri"]);
-							//var_dump($params["offset"]);
                         	$vue = "ListeProduits";
                         	$this->afficheVue($vue, $data);
 						}

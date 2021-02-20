@@ -1,4 +1,8 @@
 
+li {
+  list-style-type: none;
+}
+
 .card {
   position: relative;
   width: 280px;
@@ -84,6 +88,7 @@
     color: #e5ecf4;
     text-decoration: none;
     background: #8a4fff;
+    border: none;
     border-radius: 1px;
     text-transform: uppercase;
     letter-spacing: 1px;

@@ -15,13 +15,10 @@ class ProductList {
             //e.preventDefault();
 
             this.showFirstList();
-            console.log('je eme suis rendu ici')
         });
         
         this._elBtn.addEventListener('click', (e) => {
             e.preventDefault();
-
-            console.log('click');
 
             this.showProductList();
         });
@@ -51,7 +48,6 @@ class ProductList {
     }
 
     activeTiles = () => {
-        console.log('je passe ici')
         
         this._elProductInventaire = this._el.querySelectorAll('[data-js-id]');
         this._elProductName = this._el.querySelectorAll('[data-js-name]');
@@ -65,14 +61,12 @@ class ProductList {
         for (let i = 0, l = this._allTiles.length; i < l; i++) {
             
             let productInventaire = this._elProductInventaire[i].value;
-            
-            console.log(productInventaire)
 
             if (productInventaire <= 0) {
             this._allTiles[i].disabled = true;
             this._allTiles[i].classList.add('btn--disabled');
             this._allTiles[i].classList.remove('grid-item');
-            } else{ this._allTiles[i].disabled = false; } 
+            } else { this._allTiles[i].disabled = false; } 
             
             this._allTiles[i].addEventListener('click', (e) => {
                 e.preventDefault();
@@ -90,79 +84,5 @@ class ProductList {
                 this.ajouteSession(productName, productPrice, productImage);
             });
         }
-    }
-
-    showFirstList = () => {
-
-        // déclaration de l'objet XMLHttpRequest
-        var xhr;
-        xhr = new XMLHttpRequest();
-        // initialisation de la requête
-
-        if(xhr) {	
-
-            xhr.open("GET", "index.php?Boutique_AJAX&action=affichePremiereListe");
-
-            //2ème étape - spécifier la fonction de callback
-            xhr.addEventListener("readystatechange", () => {
-              
-                //console.log("État de la requête : " + xhr.readyState);
-				//console.log("Code de status : " + xhr.status);
-                if(xhr.readyState === 4) {							
-                    if(xhr.status === 200) {
-                        
-                        //les données ont été reçues
-                        this._elResults.innerHTML = xhr.response;
-                        //console.log(this._elResults.innerHTML)//xhr.responseText;
-                        console.log('je passe ici')
-                        this.activeTiles();
-                        
-                    } else if (xhr.status === 404) {
-                        //la page demandée n'existe pas
-                    }
-                }
-            });
-            
-            //3ème étape - envoi de la requête
-            xhr.send();
-        }
-    }
-
-    showProductList = () => {
-
-        // déclaration de l'objet XMLHttpRequest
-        var xhr;
-        xhr = new XMLHttpRequest();
-        // initialisation de la requête
-
-        if(xhr) {	
-            
-            let recherche = encodeURIComponent(this._elSelect.value),
-                limit = 12;
-            limit += 12;
-            
-            xhr.open("GET", "index.php?Boutique_AJAX&action=afficheListeProduits&tri=" + recherche + "&offset=" + limit);
-
-            //2ème étape - spécifier la fonction de callback
-            xhr.addEventListener("readystatechange", () => {
-
-                //console.log("État de la requête : " + xhr.readyState);
-				//console.log("Code de status : " + xhr.status);
-                if(xhr.readyState === 4) {							
-                    if(xhr.status === 200) {
-                        
-                        //les données ont été reçues
-                        this._elResults.innerHTML = xhr.responseText;
-                        //console.log('Ça passe par ici!')
-                        this.activeTiles();
-                    } else if (xhr.status === 404) {
-                        //la page demandée n'existe pas
-                    }
-                }
-            });
-            
-            //3ème étape - envoi de la requête
-            xhr.send();
-        }
-    } 
+    }    
 }

@@ -2,15 +2,15 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    //background-color: #8a4fff;    
-    background-color: #90F3FF;    
+    background-color: #90F3FF;  
+    //margin-top: 0px;  
     margin-bottom: 50px;
         
     nav {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        height: 6em;
+        height: auto;
         width: 95%;
         
         h1 a {   
@@ -40,30 +40,45 @@ header {
             text-align: center;
         }
         
-        .command{
-            display: inline-flex;
-        }
-        
-        .items {
-            align-items: center;
-            background-color: #bd4848;
-            border-radius: 100px;
-            height: 1.5em;
+        .cart {
+            display: flex;
+            flex-direction: column;
             justify-content: center;
-            margin-left: 2em;
-            margin-top: 1em;
-            position: absolute;
-            width: 1.5em;
-        }
-        
-        .nbItems {
-            font-size: 18px;
-            align-items: center;
-            color: white;
-            margin-left: 2.2em;
-            margin-top: 0.8em;
-            justify-content: center;
-            position: absolute;
+            //width: auto;
+            
+            .svg_bag {
+                position: relative;
+                width: 68px;
+                height: 68px;
+                margin: auto;
+                
+                span {
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    padding: 4px 8px;
+                    border-radius: 50%;
+                    background-color: #bd4848;
+                    color: white;
+                    //transform: translate(50%, -50%);
+                }
+            }
+
+            &_buy {
+                font-size: .8em;
+                padding: 5px 15px;
+                color: #e5ecf4;
+                background: #8a4fff;
+                border: none;
+                border-radius: 1px;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            
+                &:hover {
+                  color: #8a4fff;
+                  background: #e5ecf4;
+                }
+              }
         }
     }
 }
