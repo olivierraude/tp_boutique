@@ -1,4 +1,4 @@
-class Tiles {
+export class Tiles {
     constructor(el) {
         this._el = el;
 

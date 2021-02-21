@@ -1,7 +1,10 @@
-class ProductList {
+import { ajaxRequest } from "./ajax.js";
+import { Tiles } from "./Tiles.js";
+
+export class ProductList{
     constructor(el) {
         this._el = el;
-
+        this._elTiles = this._el.querySelectorAll('[data-js-product]');
         this._elSelect = this._el.querySelector('[data-js-select]');
         this._elBtn = this._el.querySelector('[data-js-more]');
         this._elResults = this._el.querySelector('[data-js-results]');
@@ -48,15 +51,6 @@ class ProductList {
     }
 
     activeTiles = () => {
-        
-        this._elProductInventaire = this._el.querySelectorAll('[data-js-id]');
-        this._elProductName = this._el.querySelectorAll('[data-js-name]');
-        this._elProductPrice = this._el.querySelectorAll('[data-js-price]');
-        this._elProductImage = this._el.querySelectorAll('[data-js-image]');        
-        this._elProduct = this._el.querySelector('[data-js-product]'); 
-        this._allTiles = this._el.querySelectorAll('[data-js-product]');
-        this._elBtnCommand = this._el.querySelector('[data-js-command]');
-
 
         for (let i = 0, l = this._allTiles.length; i < l; i++) {
             

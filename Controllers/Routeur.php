@@ -23,7 +23,6 @@
 				//controleur par défaut
 				$classe = "Controleur_Boutique";
 			}
-
 			//var_dump("classe : " . $classe);
 			
 			//vérifier que la classe existe
