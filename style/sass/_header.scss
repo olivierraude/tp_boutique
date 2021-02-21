@@ -2,7 +2,7 @@ header {
     display: flex;
     width: 100%;
     justify-content: center;
-    background-color: #90F3FF;  
+    background-color: var(--c-background);  
     //margin-top: 0px;  
     margin-bottom: 50px;
         
@@ -14,7 +14,7 @@ header {
         width: 95%;
         
         h1 a {   
-            font-family: 'Italiana', serif;
+            font-family: var(--f-title);
             font-size: 2em;
             color: white;
             text-decoration: none;
@@ -67,8 +67,8 @@ header {
             &_buy {
                 font-size: .8em;
                 padding: 5px 15px;
-                color: #e5ecf4;
-                background: #8a4fff;
+                color: var(--c-light_blue);
+                background: var(--c-dark_blue);
                 border: none;
                 border-radius: 1px;
                 text-transform: uppercase;
@@ -76,7 +76,7 @@ header {
             
                 &:hover {
                   color: #8a4fff;
-                  background: #e5ecf4;
+                  background: var(--c-light_blue);
                 }
               }
         }

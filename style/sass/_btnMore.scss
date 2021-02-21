@@ -1,16 +1,16 @@
 
 .more {
     align-items: center;
-    background-color: #8a4fff;
+    background-color: var(--c-dark_blue);
     border-radius: 100px;
-    border: 2px solid #8a4fff;
+    border: 2px solid var(--c-dark_blue);
     display: flex;
     justify-content: center;
     padding: 1em;
     
     &:hover {
-        background-color: #90F3FF;
-        border: 2px solid #90F3FF;
+        background-color: var(--c-light_blue);
+        border: 2px solid var(--c-light_blue);
 
     }
 

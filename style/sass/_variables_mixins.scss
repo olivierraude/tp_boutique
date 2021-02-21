@@ -1,4 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Italiana&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300&display=swap");
 
+html {
+    //Colors
+    --c-background: #90F3FF;
+    --c-dark_blue: #8a4fff;
+    --c-light_blue: #e5ecf4;
 
+    // Fonts
+    --f-title: "Italiana", serif;
+    --f-text: "Raleway", sans-serif;
+}
