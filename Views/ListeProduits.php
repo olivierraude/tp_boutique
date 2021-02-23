@@ -1,6 +1,6 @@
 <section class="list-container" >
 
-	<ul class="list-container_wrapper">
+	<ul class="list-container_wrapper" data-js-list>
 
 		<?php
 

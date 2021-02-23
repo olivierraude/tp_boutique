@@ -1,15 +1,16 @@
-import { ajaxRequest } from "./ajax.js";
-import { Tiles } from "./Tiles.js";
+//import { ajaxRequest } from "./ajax.js";
+//import { Tiles } from "./Tiles.js";
 
 export class ProductList{
-    constructor(el) {
-        this._el = el;
-        this._elTiles = this._el.querySelectorAll('[data-js-product]');
-        this._elSelect = this._el.querySelector('[data-js-select]');
-        this._elBtn = this._el.querySelector('[data-js-more]');
-        this._elResults = this._el.querySelector('[data-js-results]');
+    constructor(elt) {
+        this.elt = elt
+        this.eltList = elt.querySelector(['data-js-list'])
+        this.eltTiles = elt.querySelectorAll('[data-js-product]')
+        this.eltSelect = elt.querySelector('[data-js-select]')
+        this.eltBtn = elt.querySelector('[data-js-more]')
+        this.eltResults = elt.querySelector('[data-js-results]')
 
-        this.init();
+        this.init()
     }
 
     init = () => {
@@ -20,16 +21,16 @@ export class ProductList{
             this.showFirstList();
         });
         
-        this._elBtn.addEventListener('click', (e) => {
+        this.eltBtn.addEventListener('click', (e) => {
             e.preventDefault();
 
             this.showProductList();
         });
 
-        this._elSelect.addEventListener('change', () => {
+        this.eltSelect.addEventListener('change', () => {
             
             console.log('change');
-            console.log(this._elSelect.value);
+            console.log(this.eltSelect.value);
             
             this.showProductList();
         });
@@ -54,7 +55,7 @@ export class ProductList{
 
         for (let i = 0, l = this._allTiles.length; i < l; i++) {
             
-            let productInventaire = this._elProductInventaire[i].value;
+            let productInventaire = this.eltProductInventaire[i].value;
 
             if (productInventaire <= 0) {
             this._allTiles[i].disabled = true;
@@ -67,11 +68,11 @@ export class ProductList{
 
                 //btn commander ok + incrément nb produit panier
                 console.log('click');
-                console.log(this._elProduct[i]);
+                console.log(this.eltProduct[i]);
 
-                let productName = this._elProductName[i].innerHTML,
-                    productPrice = this._elProductPrice[i].innerHTML,
-                    productImage = this._elProductImage[i].src;
+                let productName = this.eltProductName[i].innerHTML,
+                    productPrice = this.eltProductPrice[i].innerHTML,
+                    productImage = this.eltProductImage[i].src;
                     
                     console.log(sessionStorage.getItem('products'));
                     
