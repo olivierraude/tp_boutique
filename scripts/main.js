@@ -1,10 +1,9 @@
-import { ProductList } from "./ProductList.js"
+import ProductList from "./ProductList.js"
 
 document.addEventListener("DOMContentLoaded", function() {
 	
 	let elProductList = document.querySelector('[data-js-list]'),
-    ProductList
-    console.log(elProductList)
+    product_list
     
-    if (elProductList) ProductList = new ProductList(elProductList)
+    if (elProductList) product_list = new ProductList(elProductList)
 });

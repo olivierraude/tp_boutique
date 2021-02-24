@@ -1,4 +1,4 @@
-<main>
+<main  data-js-list>
 	<div class="list-container">
 		<div data-component="ProductList">
 			<select class="filter" data-js-select="tri">

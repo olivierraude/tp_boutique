@@ -2,17 +2,21 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90%;     
+    width: 95%;     
     
     &_wrapper {
         display: grid;
         grid-template-columns: 1fr;
         grid-gap: auto;
-        width: 100%;
+        grid-gap: 5px;
         margin-bottom: 50px;
 
-        @media only screen and (min-width: 768px){
+        @media only screen and (min-width: 468px){
             grid-template-columns: 1fr 1fr;   
+            grid-gap: 30px;
+        }
+        @media only screen and (min-width: 768px){
+            grid-template-columns: 1fr 1fr 1fr;   
             grid-gap: 30px;
         }
         @media only screen and (min-width: 1280px){

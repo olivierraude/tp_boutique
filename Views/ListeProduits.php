@@ -1,4 +1,4 @@
-<ul class="list-container_wrapper" data-js-list>
+<ul class="list-container_wrapper">
 	<?php
 
 		foreach($data as $produit)
@@ -11,7 +11,7 @@
 				disabled>
 				<article>
 					<div class="card_img">
-						<img src=<?= $produit["produitImage"]?> alt="image de pichet" data-js-image >
+						<img src="<?= $produit["produitImage"]?>" alt="image de pichet" data-js-image >
 					</div>
 					<div class="card_content">
 						<h3 data-js-name><?=$produit["produitNom"]?></h3>

@@ -1,37 +1,37 @@
-export class Tiles {
-    constructor(el) {
-        this._el = el;
+export default class Tiles {
+    constructor(elt) {
+        this.elt = elt;
 
-        this._elProductName = this._el.querySelectorAll('[data-js-name]');
-        this._elProductPrice = this._el.querySelectorAll('[data-js-price]');
-        this._elProductImage = this._el.querySelectorAll('[data-js-image]');        
-        this._elProduct = this._el.querySelector('[data-js-product]');        
+        this.eltProductName = this.elt.querySeltectorAll('[data-js-name]');
+        this.eltProductPrice = this.elt.querySeltectorAll('[data-js-price]');
+        this.eltProductImage = this.elt.querySeltectorAll('[data-js-image]');        
+        this.eltProduct = this.elt.querySeltector('[data-js-product]');        
         
-        this._allTiles = this._el.querySelectorAll('[data-js-product]');
+        this.allTiles = this.elt.querySeltectorAll('[data-js-product]');
         
-        console.log(this._el);
-        console.log(this._elProductName);
-        console.log(this._allTiles);
+        console.log(this.elt);
+        console.log(this.eltProductName);
+        console.log(this.allTiles);
 
         this.init();
     }
 
     init = () => {
 
-        for (let i = 0, l = this._allTiles.length; i < l; i++) {
+        for (let i = 0, l = this.allTiles.length; i < l; i++) {
         
-            //Si 'inventaire' -= 0 this._allTiles.classList.add('btn--disabled');
+            //Si 'inventaire' -= 0 this.allTiles.classList.add('btn--disabled');
 
-            this._allTiles[i].addEventListener('click', (e) => {
+            this.allTiles[i].addEventListener('click', (e) => {
                 e.preventDefault();
 
                 //btn commander ok + incrément nb produit panier
                 console.log('click');
-                console.log(this._elProduct[i]);
+                console.log(this.eltProduct[i]);
 
-                let productName = this._elProductName[i].innerHTML,
-                    productPrice = this._elProductPrice[i].innerHTML,
-                    productImage = this._elProductImage[i].src;
+                let productName = this.eltProductName[i].innerHTML,
+                    productPrice = this.eltProductPrice[i].innerHTML,
+                    productImage = this.eltProductImage[i].src;
                     
                     console.log(sessionStorage.getItem('products'));
                     
@@ -52,7 +52,7 @@ export class Tiles {
         commande.push(product);
         sessionStorage.setItem('products', JSON.stringify(commande));
         
-        //this._elBtnCommand.classList.add('btn--hidden');
+        //this.eltBtnCommand.classList.add('btn--hidden');
         console.log(commande);
         //this.changePage()
     }

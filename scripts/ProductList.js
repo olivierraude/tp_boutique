@@ -1,6 +1,6 @@
-import { Tiles } from "./Tiles.js"
+import Tiles from "./Tiles.js"
 
-export class ProductList{
+export default class ProductList {
     constructor(elt) {
         this.elt = elt
         this.eltList = elt.querySelector(['data-js-list'])
@@ -13,11 +13,9 @@ export class ProductList{
     }
 
     init = () => {
-
         window.addEventListener("load", () => {
             //e.preventDefault();
 
-            this.showFirstList();
         });
         
         this.eltBtn.addEventListener('click', (e) => {
