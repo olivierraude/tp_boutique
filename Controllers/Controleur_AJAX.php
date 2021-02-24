@@ -17,7 +17,7 @@
 				{
 					case "affichePremiereListe":
 						$modeleBoutique = new Modele_Boutique();
-						$data = $modeleBoutique->obtenirProduits('id',12);
+						$data = $modeleBoutique->obtenirTous('id',12);
 						$vue = "ListeProduits";		
 						$this->afficheVue($vue, $data);
 							
@@ -27,7 +27,7 @@
 						if ((isset($params["tri"]) && $params["offset"]))
                         {
 							$modeleBoutique = new Modele_Boutique();
-							$data = $modeleBoutique->obtenirProduits($params["tri"],$params["offset"]);
+							$data = $modeleBoutique->obtenirTous($params["tri"],$params["offset"]);
                         	$vue = "ListeProduits";
                         	$this->afficheVue($vue, $data);
 						}

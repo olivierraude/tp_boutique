@@ -6,19 +6,20 @@
 			return "produits";
 		}	
 		
-		public function obtenirProduits($tri, $offset)
+		public function obtenirTous($tri = "nom ASC", $offset = 0) /* $tri = "nom ASC", offset = 0*/
 		{
 			try
 			{
-				$stmt = $this->connexion->prepare("SELECT produits.id as produitId, produits.nom as produitNom, produits.prix as produitPrix, produits.lienimage as produitImage, produits.inventaire as produitInventaire
-													FROM produits
-													ORDER BY $tri ASC
-													LIMIT 0, $offset");
+				$stmt = $this->connexion->prepare("SELECT *
+														FROM produits
+														ORDER BY " . $tri . "
+														LIMIT " . $offset . ", 12 ");
 				$stmt->execute();
 				return $stmt->fetchAll();
 			}	
-			catch(Exception $exc)
+			catch(PDOException $e)
 			{
+				trigger_error("Erreur lors de la requête: " . $e->getMessage());
 				return 0;
 			}
 		}

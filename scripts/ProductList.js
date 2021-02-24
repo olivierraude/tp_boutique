@@ -1,5 +1,4 @@
-//import { ajaxRequest } from "./ajax.js";
-//import { Tiles } from "./Tiles.js";
+import { Tiles } from "./Tiles.js"
 
 export class ProductList{
     constructor(elt) {
