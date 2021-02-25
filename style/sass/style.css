@@ -151,14 +151,21 @@ header nav .cart_buy:hover {
   }
 }
 
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 960px) {
   .list-container_wrapper {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
-@media only screen and (min-width: 1920px) {
+@media only screen and (min-width: 1450px) {
+  .list-container_wrapper {
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  }
+}
+
+@media only screen and (min-width: 1750px) {
   .list-container_wrapper {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;

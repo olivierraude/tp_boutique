@@ -1,6 +1,6 @@
 <header>
 	<nav>
-		<h1> <a href="index.php?">Popotte </a></h1>
+		<h1> <a href="index.php?"> Les Popottes </a></h1>
 		<div class="cart" data-component="Form">	
 			<div class="svg_bag">
 
