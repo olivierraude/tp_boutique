@@ -1,4 +1,4 @@
-export default class Tiles {
+export class Tiles {
     constructor(elt) {
         this.elt = elt;
 

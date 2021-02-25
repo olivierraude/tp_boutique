@@ -1,6 +1,6 @@
-import Tiles from "./Tiles.js"
+import { Tiles } from "./Tiles.js"
 
-export default class ProductList {
+export class ProductList {
     constructor(elt) {
         this.elt = elt
         this.eltList = elt.querySelector(['data-js-list'])
@@ -13,24 +13,14 @@ export default class ProductList {
     }
 
     init = () => {
-        window.addEventListener("load", () => {
-            //e.preventDefault();
-
-        });
+        this.showItems();
         
-        this.eltBtn.addEventListener('click', (e) => {
-            e.preventDefault();
+    
+    }
 
-            this.showProductList();
-        });
+    showItems = () => {
+        console.log('Hello world!')
 
-        this.eltSelect.addEventListener('change', () => {
-            
-            console.log('change');
-            console.log(this.eltSelect.value);
-            
-            this.showProductList();
-        });
     }
 
     ajouteSession = (productName, productPrice, productImage) => {
