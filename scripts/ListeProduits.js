@@ -1,26 +1,35 @@
-import { Tiles } from "./Tiles.js"
+import { ajaxRequest } from './ajax.js'
+//import { Tuile } from "./Tuile.js"
 
-export class ProductList {
+export class ListeProduits {
     constructor(elt) {
         this.elt = elt
-        this.eltList = elt.querySelector(['data-js-list'])
-        this.eltTiles = elt.querySelectorAll('[data-js-product]')
+        this.eltListe = elt.querySelector(['data-js-list'])
+        this.eltTuile = elt.querySelectorAll('[data-js-product]')
         this.eltSelect = elt.querySelector('[data-js-select]')
         this.eltBtn = elt.querySelector('[data-js-more]')
         this.eltResults = elt.querySelector('[data-js-results]')
+
+        this.paramAjax = []
 
         this.init()
     }
 
     init = () => {
-        this.showItems();
-        
-    
+        this.getAllProducts()   
     }
 
-    showItems = () => {
-        console.log('Hello world!')
-
+    getAllProducts(){
+        this.paramAjax =
+        {
+            methode : "GET",
+            action : `index.php?Ajax&action=obtenirTotalProduits`
+        }
+        ajaxRequest(this.paramAjax, (response_ajax) => {
+            this.elt.dataset.totalProduits = response_ajax
+            this.active_btn()
+            console.log(this.elt.dataset.totalProduits)
+        })
     }
 
     ajouteSession = (productName, productPrice, productImage) => {
@@ -37,6 +46,7 @@ export class ProductList {
         
         console.log(commande.length);
     }
+
 
     activeTiles = () => {
 

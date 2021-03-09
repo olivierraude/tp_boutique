@@ -21,7 +21,8 @@
         }
 
         // Envoi de la fonction de rappel : callback
-        xhr.onreadystatechange = () => {
+
+        xhr.addEventListener("onreadystatechange", () => {
 
             if (xhr.readyState === 4) {
 
@@ -32,17 +33,14 @@
                     console.log('erreur 404')
                 }
             }
+        })
+        // Renvoi des données
+        let donnees = ""
+        if (data.data_to_send){
+            donnees = JSON.stringify(data.data_to_send)
+            donnees = encodeURIComponent(donnees)
         }
-    }
+        xhr.send(donnees)
+        //console.log(donnees)
+    } 
  }
-
-// Renvoi des données
-let donnees = ""
-// S'il y a des données à envoyer 
-if (data.data_to_send){
-    // Convertion du JSON en string
-    donnees = JSON.stringify(data.data_to_send)
-    // Renvoi de l'URL
-    donnees = encodeURIComponent(donnees)
-}
-xhr.send(donnees)

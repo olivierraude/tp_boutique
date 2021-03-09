@@ -23,5 +23,21 @@
 				return 0;
 			}
 		}
+
+		public function obtenirTotalProduits()
+		{
+			try
+			{
+				$stmt = $this->connexion->prepare("SELECT COUNT(*) AS total FROM produits");
+				$stmt->execute();
+				return $stmt->fetch(PDO::FETCH_ASSOC);
+				var_dump($stmt);
+			}
+			catch(PDOException $e) 
+			{
+				trigger_error("Erreur de requête: " . $e->getMessage());
+				return 0;
+			}
+		}
 	}
 ?>

@@ -15,15 +15,7 @@
 				//ce switch détermine la vue $vue et obtient le modèle $data
 				switch($params["action"])
 				{
-					case "affichePremiereListe":
-						$modeleBoutique = new Modele_Boutique();
-						$data = $modeleBoutique->obtenirTous('id',12);
-						$vue = "ListeProduits";		
-						$this->afficheVue($vue, $data);
-							
-						break;
-
-					case "afficheListeProduits":
+					case "afficheProduitsSuivants":
 						if ((isset($params["tri"]) && $params["offset"]))
                         {
 							$modeleBoutique = new Modele_Boutique();
@@ -32,6 +24,12 @@
                         	$this->afficheVue($vue, $data);
 						}
 						break;	
+
+					case "obtenirTotalProduits":
+						$modeleBoutique = new Modele_Boutique();
+						$data = $modeleBoutique->obtenirTotalProduits();	
+						echo ($data['total']);
+					break;
           	
 					default:
 						echo "ERROR IN SWITCH";		
