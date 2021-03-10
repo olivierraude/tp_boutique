@@ -1,11 +1,11 @@
-<ul class="list-container_wrapper">
+<ul class="list-container_wrapper" <?= $data["data-js"] ?>>
 	<?php
 
 		foreach($data as $produit)
 		{
 		?>
 			<li class="card"
-				value=<?= $produit["produitInventaire"]?> 
+				value="<?= $produit["produitInventaire"]?>" 
 				data-js-product
 				data-js-id 
 				disabled>

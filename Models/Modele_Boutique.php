@@ -31,7 +31,6 @@
 				$stmt = $this->connexion->prepare("SELECT COUNT(*) AS total FROM produits");
 				$stmt->execute();
 				return $stmt->fetch(PDO::FETCH_ASSOC);
-				var_dump($stmt);
 			}
 			catch(PDOException $e) 
 			{
