@@ -300,18 +300,18 @@ li {
 }
 
 .more {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  background-color: var(--c-dark_blue);
-  border-radius: 100px;
-  border: 2px solid var(--c-dark_blue);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: var(--c-dark_blue);
+  border-radius: 100px;
+  border: 2px solid var(--c-dark_blue);
   padding: 1em;
 }
 

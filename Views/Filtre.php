@@ -4,7 +4,9 @@
 			<label  for="filtre-select">
 				Filtre:
 			</label>
-			<select class="filter" data-js-select>
+			<select class="filter" 
+					id = "filtre-select"
+					data-js-select>
 
 				<option value="nom ASC" selected>De A à Z</option>
 				<option value="nom DESC">De Z à A</option>
