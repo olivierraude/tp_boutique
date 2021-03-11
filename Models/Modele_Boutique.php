@@ -6,13 +6,13 @@
 			return "produits";
 		}	
 		
-		public function obtenirTous($tri = "nom ASC", $offset = 0) /* $tri = "nom ASC", offset = 0*/
+		public function obtenirTous($filtre = "nom ASC", $offset = 0) /* $tri = "nom ASC", offset = 0*/
 		{
 			try
 			{
 				$stmt = $this->connexion->prepare("SELECT *
 														FROM produits
-														ORDER BY " . $tri . "
+														ORDER BY " . $filtre . "
 														LIMIT " . $offset . ", 12 ");
 				$stmt->execute();
 				return $stmt->fetchAll();

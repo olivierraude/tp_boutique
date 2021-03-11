@@ -43,7 +43,6 @@
 
 			$modeleBoutique = new Modele_Boutique();
 			$data = $modeleBoutique->obtenirTous();
-
 			$this->afficheVue("Filtre", $data);
 			$this->afficheVue("ListeProduits", $data);
 			$this->afficheVue("BtnListe", $data);

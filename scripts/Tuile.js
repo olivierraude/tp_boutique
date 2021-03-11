@@ -2,22 +2,16 @@ export class Tuile {
     constructor(elt) {
         this.elt = elt;
 
-        /* this.eltProductName = this.elt.querySeltectorAll('[data-js-name]');
-        this.eltProductPrice = this.elt.querySeltectorAll('[data-js-price]');
-        this.eltProductImage = this.elt.querySeltectorAll('[data-js-image]');        
-        this.eltProduct = this.elt.querySeltector('[data-js-product]');        
-        
-        this.allTiles = this.elt.querySeltectorAll('[data-js-product]');
-        
-        console.log(this.elt);
-        console.log(this.eltProductName);
-        console.log(this.allTiles); */
+        this.eltProductName = elt.querySelector('[data-js-name]');
+        this.eltProductPrice = elt.querySelector('[data-js-price]');
+        this.eltProductImage = elt.querySelector('[data-js-image]');        
+        this.allTiles = elt.querySelectorAll('[data-js-product]');
 
         this.init();
     }
 
     init = () => {
-
+        
 /*         for (let i = 0, l = this.allTiles.length; i < l; i++) {
         
             //Si 'inventaire' -= 0 this.allTiles.classList.add('btn--disabled');

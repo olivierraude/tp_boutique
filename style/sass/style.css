@@ -111,7 +111,7 @@ header nav .cart_buy:hover {
   margin-bottom: 50px;
 }
 
-.list-container {
+.page-container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -125,7 +125,7 @@ header nav .cart_buy:hover {
   width: 95%;
 }
 
-.list-container_wrapper {
+.page-container_wrapper {
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: 1fr;
@@ -136,7 +136,7 @@ header nav .cart_buy:hover {
 }
 
 @media only screen and (min-width: 468px) {
-  .list-container_wrapper {
+  .page-container_wrapper {
     -ms-grid-columns: 1fr 1fr;
         grid-template-columns: 1fr 1fr;
     grid-gap: 30px;
@@ -144,7 +144,7 @@ header nav .cart_buy:hover {
 }
 
 @media only screen and (min-width: 768px) {
-  .list-container_wrapper {
+  .page-container_wrapper {
     -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
     grid-gap: 30px;
@@ -152,21 +152,21 @@ header nav .cart_buy:hover {
 }
 
 @media only screen and (min-width: 960px) {
-  .list-container_wrapper {
+  .page-container_wrapper {
     -ms-grid-columns: 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 1450px) {
-  .list-container_wrapper {
+  .page-container_wrapper {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   }
 }
 
 @media only screen and (min-width: 1750px) {
-  .list-container_wrapper {
+  .page-container_wrapper {
     -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   }

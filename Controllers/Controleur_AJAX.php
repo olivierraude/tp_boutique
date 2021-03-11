@@ -1,5 +1,5 @@
 <?php
-	class Controleur_boutique_AJAX extends BaseControleur
+	class Controleur_Ajax extends BaseControleur
 	{	
 		//la fonction qui sera appelée par le routeur
 		public function traite(array $params)
@@ -16,10 +16,10 @@
 				switch($params["action"])
 				{
 					case "afficheProduitsSuivants":
-						if ((isset($params["tri"]) && $params["offset"]))
+						if ((isset($params["offset"]) && $params["filtre"]))
                         {
 							$modeleBoutique = new Modele_Boutique();
-							$data = $modeleBoutique->obtenirTous($params["tri"],$params["offset"]);
+							$data = $modeleBoutique->obtenirTous($params["filtre"],$params["offset"]);
                         	$vue = "ListeProduits";
                         	$this->afficheVue($vue, $data);
 						}

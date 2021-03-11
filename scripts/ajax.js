@@ -9,26 +9,25 @@
     // Creation de l'objet XMLHttpRequest
     var xhr;
     xhr = new XMLHttpRequest();
-
+    
     if (xhr) {
         // Définition du type de requête et des données
         xhr.open(data.method, data.action);
         if(data.method == "POST"){
             // Si les données sont du JSON, le retour sera un contenu json, sinon on renvoie une url.
             if (data.json){
-                xhr.setREquestHeader("Content-Type", "application/json")
-            } else xhr.setREquestHeader("Content-Type", "application/x-www-form-urlencoded")
+                xhr.setRequestHeader("Content-Type", "application/json")
+            } else xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded")
         }
 
         // Envoi de la fonction de rappel : callback
 
-        xhr.addEventListener("onreadystatechange", () => {
+        xhr.addEventListener("readystatechange", () => {
 
             if (xhr.readyState === 4) {
 
                 if (xhr.status === 200) {
                     callback(xhr.responseText)
-
                 } else if (xhr.status === 404) {
                     console.log('erreur 404')
                 }

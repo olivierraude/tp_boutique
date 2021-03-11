@@ -1,21 +1,22 @@
-<ul class="list-container_wrapper" <?= $data["data-js"] ?>>
+<ul class="page-container_wrapper" >
 	<?php
 
 		foreach($data as $produit)
+		//var_dump($produit);
 		{
 		?>
 			<li class="card"
-				value="<?= $produit["produitInventaire"]?>" 
+				value="<?= $produit["inventaire"]?>" 
 				data-js-product
-				data-js-id 
+				data-js-id = <?= $produit['id'] ?>
 				disabled>
 				<article>
 					<div class="card_img">
-						<img src="<?= $produit["produitImage"]?>" alt="image de pichet" data-js-image >
+						<img src="<?= $produit["lienimage"]?>" alt="image de pichet" data-js-image >
 					</div>
 					<div class="card_content">
-						<h3 data-js-name><?=$produit["produitNom"]?></h3>
-						<h2 class="card_price" data-js-price><?=$produit["produitPrix"] . "$"?></h2>
+						<h3 data-js-name><?=$produit["nom"]?></h3>
+						<h2 class="card_price" data-js-price><?=$produit["prix"] . "$"?></h2>
 						<button class="card_buy" data-js-buy>Ajouter au panier</button>
 					</div>
 				</article>
