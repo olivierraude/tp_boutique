@@ -2,53 +2,54 @@ export class Tuile {
     constructor(elt) {
         this.elt = elt;
 
-        this.eltProductName = elt.querySelector('[data-js-name]');
-        this.eltProductPrice = elt.querySelector('[data-js-price]');
-        this.eltProductImage = elt.querySelector('[data-js-image]');        
-        this.allTiles = elt.querySelectorAll('[data-js-product]');
+        this.eltNomProduit = elt.querySelector('[data-js-name]');
+        this.eltPrixProduit = elt.querySelector('[data-js-price]');
+        this.eltImageProduit = elt.querySelector('[data-js-image]');        
+        this.tuiles = elt.querySelectorAll('[data-js-buy]');
+
 
         this.init();
     }
 
     init = () => {
-        
-/*         for (let i = 0, l = this.allTiles.length; i < l; i++) {
+        this.activerTuiles(this.tuiles)
+    }
+
+    activerTuiles = (tuiles) => {
+        for (let tuile of tuiles) {
         
             //Si 'inventaire' -= 0 this.allTiles.classList.add('btn--disabled');
 
-            this.allTiles[i].addEventListener('click', (e) => {
+            tuile.addEventListener('click', (e) => {
                 e.preventDefault();
 
                 //btn commander ok + incrément nb produit panier
                 console.log('click');
-                console.log(this.eltProduct[i]);
 
-                let productName = this.eltProductName[i].innerHTML,
-                    productPrice = this.eltProductPrice[i].innerHTML,
-                    productImage = this.eltProductImage[i].src;
+                let nomProduit = this.eltNomProduit.innerHTML,
+                    prixProduit = this.eltPrixProduit.innerHTML,
+                    imageProduit = this.eltImageProduit.src;
                     
-                    console.log(sessionStorage.getItem('products'));
-                    
-                this.ajouteSession(productName, productPrice, productImage);
+                this.ajouterSession(nomProduit, prixProduit, imageProduit);
             });
         }
     }
 
-    ajouteSession = (productName, productPrice, productImage) => {
+    ajouterSession = (nomProduit, prixProduit, imageProduit) => {
 
         let product = {
-            'nom' : productName,
-            'prix' : productPrice,
-            'image' : productImage
+            'nom' : nomProduit,
+            'prix' : prixProduit,
+            'image' : imageProduit
         };
-
-        let commande =  JSON.parse(sessionStorage.getItem('products')) || [];
-        commande.push(product);
-        sessionStorage.setItem('products', JSON.stringify(commande));
         
+        let commande =  JSON.parse(sessionStorage.getItem('products')) || [];
+            commande.push(product);
+            sessionStorage.setItem('products', JSON.stringify(commande));
+        
+        console.log(commande)
         //this.eltBtnCommand.classList.add('btn--hidden');
-        console.log(commande);
+        //console.log(commande);
         //this.changePage()
-    } */
     }
 }

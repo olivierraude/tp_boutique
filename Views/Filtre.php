@@ -14,7 +14,5 @@
 				<option value="prix DESC">Par ordre de prix + au -</option>
 
 			</select>
-
-			<!-- <div data-js-results></div> -->
 		</div>
 	

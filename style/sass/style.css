@@ -260,7 +260,6 @@ li {
 }
 
 .card_content h3 {
-  font-size: 15px;
   color: var(--c-dark_blue);
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -318,6 +317,13 @@ li {
 .more:hover {
   background-color: var(--c-light_blue);
   border: 2px solid var(--c-light_blue);
+  cursor: pointer;
+}
+
+.more:disabled {
+  pointer-events: none;
+  border: transparent;
+  background-color: lightgrey;
 }
 
 .more svg {
@@ -354,6 +360,10 @@ main {
       -ms-flex-align: center;
           align-items: center;
   width: 100%;
+}
+
+h3 {
+  font-size: .8em;
 }
 
 .arrow {
