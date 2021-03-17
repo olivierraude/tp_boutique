@@ -18,7 +18,7 @@
 						<h3 data-js-name><?=$produit["nom"]?></h3>
 						<h2 class="card_price" data-js-price><?=$produit["prix"] . "$"?></h2>
 						<button class="card_buy" data-js-buy>Ajouter au panier</button>
-						<p data-js-inv>Disponible : <?=$produit["inventaire"]?></p>
+						<p data-js-inventaire>Disponible : <?=$produit["inventaire"]?></p>
 					</div>
 				</article>
 			</li>	

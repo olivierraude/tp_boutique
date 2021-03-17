@@ -1,3 +1,5 @@
+import { ajouterSession } from "./session.js"
+
 export class Tuile {
     constructor(elt) {
         this.elt = elt;
@@ -23,33 +25,12 @@ export class Tuile {
             tuile.addEventListener('click', (e) => {
                 e.preventDefault();
 
-                //btn commander ok + incrément nb produit panier
-                console.log('click');
-
                 let nomProduit = this.eltNomProduit.innerHTML,
                     prixProduit = this.eltPrixProduit.innerHTML,
                     imageProduit = this.eltImageProduit.src;
                     
-                this.ajouterSession(nomProduit, prixProduit, imageProduit);
+                ajouterSession(nomProduit, prixProduit, imageProduit);
             });
         }
-    }
-
-    ajouterSession = (nomProduit, prixProduit, imageProduit) => {
-
-        let product = {
-            'nom' : nomProduit,
-            'prix' : prixProduit,
-            'image' : imageProduit
-        };
-        
-        let commande =  JSON.parse(sessionStorage.getItem('products')) || [];
-            commande.push(product);
-            sessionStorage.setItem('products', JSON.stringify(commande));
-        
-        console.log(commande)
-        //this.eltBtnCommand.classList.add('btn--hidden');
-        //console.log(commande);
-        //this.changePage()
     }
 }

@@ -8,7 +8,7 @@ export class ListeProduits {
     this.option_filtre = elt.querySelector("[data-js-select]");
     this.page_container = this.elt.querySelector(".page-container");
     this.liste_container = this.elt.querySelector(".page-container_wrapper");
-    this.eltBtn = elt.querySelector("[data-js-more]");
+    this.btn = elt.querySelector("[data-js-more]");
 
     this.liste_produit_Id = 0;
     this.produits_par_page = 12;
@@ -29,7 +29,7 @@ export class ListeProduits {
 
       this.afficherListeProduits();
     });
-    this.eltBtn.addEventListener("click", () => {
+    this.btn.addEventListener("click", () => {
       this.liste_produit_Id += 1;
       this.afficherListeProduits();
     });
@@ -91,7 +91,7 @@ export class ListeProduits {
     this.liste_Id_Max = Math.floor(
       this.elt.dataset.totalProduit / this.produits_par_page
     );
-    this.eltBtn.disabled =
+    this.btn.disabled =
       this.liste_produit_Id < this.liste_Id_Max ? false : true;
   };
 }
