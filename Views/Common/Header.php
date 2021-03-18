@@ -5,7 +5,7 @@
 			data-js-panier>	
 			<div class="svg_bag">
 
-				<span data-js-compteur></span>
+				<span class="hidden" data-js-compteur></span>
 				<svg
 					data-js-svg
 					version="1.1" 
@@ -38,7 +38,7 @@
 				</svg>
 			</div>
 			
-			<button class="cart_buy" href="./index.php?Boutique&action=affichePagePanier" class="btn--command btn--hidden" data-js-command> Commander </button>
+			<button class="cart_buy hidden" href="./index.php?Boutique&action=affichePagePanier" data-js-command> Commander </button>
 			
 		</div>
 	</nav>

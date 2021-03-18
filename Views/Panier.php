@@ -5,6 +5,6 @@
 		
 	</ul>
 
-	<button class="btn" data-js-submit>Soumettre</button>
+	<button class="btn hidden" data-js-submit>Soumettre</button>
 	<a href="index.php" class="arrow">Corriger</a>
 </div>

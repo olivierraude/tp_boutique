@@ -1,9 +1,8 @@
-export let ajouterSession = (nomProduit, prixProduit, imageProduit) => {
+export let ajouterSession = (item) => {
     let quantiteProduit = 0
+
     let produit = {
-        'nom' : nomProduit,
-        'prix' : prixProduit,
-        'image' : imageProduit,
+        'nom' : item.dataset.itemNom,
         'quantite' : quantiteProduit
     };
     
