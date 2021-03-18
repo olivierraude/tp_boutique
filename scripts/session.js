@@ -11,6 +11,6 @@ export let ajouterSession = (item) => {
         console.log(commande)
         sessionStorage.setItem('commande', JSON.stringify(commande))
 
-        console.log(sessionStorage.commande)
+        //console.log(sessionStorage.commande)
         //sessionStorage.clear();
 }

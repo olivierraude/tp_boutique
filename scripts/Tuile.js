@@ -16,7 +16,10 @@ export class Tuile {
 
     activerTuiles = () => {
         this.btn_acheter.addEventListener('click', () => { 
-            ajouterSession(this.elt);
+            ajouterSession(this.elt)
+            this.panier.raffraichir_compteur()
+            if (this.panier.compteur.innerHTML =="1")
+            this.panier.afficher_btn_commande()
         });
     }
 }

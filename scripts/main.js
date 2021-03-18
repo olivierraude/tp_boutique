@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	    eltListeProduits = document.querySelector('[data-js-list]'),
         panier,
         liste_produits
-
+    
     if (eltPanier) panier = new Panier(eltPanier)
-    if (eltListeProduits) liste_produits = new ListeProduits(eltListeProduits)
+    if (eltListeProduits) liste_produits = new ListeProduits(eltListeProduits,panier)
 });

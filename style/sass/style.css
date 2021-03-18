@@ -4,8 +4,10 @@ html {
   --c-background: #90F3FF;
   --c-dark_blue: #8a4fff;
   --c-light_blue: #e5ecf4;
+  --c-alert: #bd4848;
   --f-title: "Italiana", serif;
   --f-text: "Raleway", sans-serif;
+  --f-compteur: Courrier, sans-serif;
 }
 
 header {
@@ -41,24 +43,52 @@ header nav h1 a {
   text-decoration: none;
 }
 
-header nav .btn--hidden {
-  display: none;
+header nav svg .st0 {
+  fill: #dddddd;
 }
 
-header nav .btn--command {
-  margin-top: 3.5em;
-  margin-right: 2em;
+header nav svg .st1 {
+  fill: #b6c7b5;
 }
 
-header nav .btn--disabled {
-  background-color: #ffffff;
-  border: 1px solid rgba(209, 200, 200, 0.8);
-  border-radius: 5px;
-  font-size: 20px;
-  height: 17em;
-  padding: 20px;
-  opacity: 50%;
-  text-align: center;
+header nav svg .st2 {
+  fill: #a3a38c;
+}
+
+header nav svg .st3 {
+  fill: #8d8582;
+}
+
+header nav svg .st4 {
+  fill: #75706e;
+}
+
+header nav svg .st5 {
+  fill: #7a7979;
+}
+
+header nav .actif .st0 {
+  fill: #B4DEB2;
+}
+
+header nav .actif .st1 {
+  fill: #86C983;
+}
+
+header nav .actif .st2 {
+  fill: #B5B51F;
+}
+
+header nav .actif .st3 {
+  fill: #FF7C48;
+}
+
+header nav .actif .st4 {
+  fill: #FF4C04;
+}
+
+header nav .actif .st5 {
+  fill: #98981A;
 }
 
 header nav .cart {
@@ -85,10 +115,25 @@ header nav .cart .svg_bag span {
   position: absolute;
   top: 0;
   right: 0;
-  padding: 4px 8px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 25px;
+  height: 25px;
   border-radius: 50%;
-  background-color: #bd4848;
+  background-color: var(--c-alert);
+  font-family: var(--f-text);
   color: white;
+}
+
+header nav .cart .svg_bag span.hidden {
+  display: none;
 }
 
 header nav .cart_buy {
